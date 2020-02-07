@@ -1,0 +1,17 @@
+{
+  "name": "kr.co.vlay.applistplugin",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "kr.co.vlay.appListPlugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}
