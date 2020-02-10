@@ -41,11 +41,11 @@ public class appList extends CordovaPlugin {
             intent.addCategory(Intent.CATEGORY_LAUNCHER);
             List<ResolveInfo> appList = packageManager.queryIntentActivities(intent, 0);
 
-            List<Map<String, Object>> arr = new ArrayList<Map<String, Object>>();
+            List<JSONObject> arr = new ArrayList<JSONObject>();
             for (ResolveInfo al : appList) {
-                ActivityInfo ai = al.activityInfo;
-                Map<String, Object> item = new HashMap<>();
-                item.put("appId", ai.packageName);
+                ActivityInfo ai = al.activityInfo;                
+                JSONObject item = new JSONObject();
+                item.put("appId", ai.packageName.toString());
                 item.put("appName", ai.loadLabel(packageManager).toString());
                 arr.add(item);
             }
