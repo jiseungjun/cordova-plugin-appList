@@ -35,7 +35,7 @@ public class appList extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("gatAppList")) {
+        if (action.equals("getAppList")) {
             PackageManager packageManager = context.getPackageManager();
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_LAUNCHER);
